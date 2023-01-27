@@ -1,0 +1,23 @@
+.btn {
+  padding: $space-2 $space-6;
+  border-radius: $border-radius-sm;
+  min-width: 8rem;
+  &.btn-primary {
+    background-color: $deep-blue;
+    &:hover {
+      background-color: $deep-blue-hover;
+    }
+  }
+  &.btn-secondary {
+    background-color: #FFF;
+    color: $dark;
+    border-color: $dark;
+    &:hover {
+      background-color: $dark;
+      color: #fff;
+    }
+    &:active {
+      background-color: $dark;
+    }
+  }
+}

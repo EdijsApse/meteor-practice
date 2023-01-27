@@ -1,0 +1,27 @@
+.auth-form-card {
+  max-width: 30rem;
+  width: 100%;
+  padding: $space-8;
+  h1 {
+    margin-bottom: $space-8;
+    &::after {
+      width: 5rem;
+      height: 4px;
+      border-radius: $border-radius-sm;
+      background-color: $deep-blue;
+      content: "";
+      display: block;
+      margin-top: $space-2;
+    }
+  }
+  .auth-actions {
+    margin-top: $space-8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+  }
+}

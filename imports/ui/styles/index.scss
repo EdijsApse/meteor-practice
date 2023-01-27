@@ -1,0 +1,35 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./variables";
+@import "./fonts";
+@import "./animations";
+
+@import "./ui/index.scss";
+@import "./components/index.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-semibold();
+  color: $dark;
+}
+
+a,
+p,
+span,
+input,
+button,
+label {
+  @include font-regular();
+  color: $dark;
+}
+
+.clickable {
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}

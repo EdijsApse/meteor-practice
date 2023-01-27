@@ -1,0 +1,15 @@
+.form-group {
+  margin-bottom: $space-4;
+  label {
+    margin-bottom: $space-4;
+  }
+  input {
+    border: 1px solid $pale-gray;
+    border-radius: $border-radius-sm;
+    padding: $space-2 $space-4;
+    &:focus {
+      border-color: $deep-blue;
+      box-shadow: 0px 0px 3px 1px $pale-gray;
+    }
+  }
+}

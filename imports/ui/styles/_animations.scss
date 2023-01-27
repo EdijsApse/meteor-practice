@@ -1,0 +1,35 @@
+.fade-enter-active {
+  animation: fade 0.3s ease-out;
+}
+
+.fade-leave-active {
+  animation: fade 0.3s ease-out reverse;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-enter-active {
+  animation: slide 0.2s ease-out;
+}
+
+.slide-leave-active {
+  animation: slide 0.2s ease-out reverse;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
