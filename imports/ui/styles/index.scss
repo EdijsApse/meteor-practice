@@ -33,3 +33,13 @@ label {
         text-decoration: underline;
     }
 }
+
+.error-message {
+  margin-bottom: 0;
+  color: $danger;
+  font-size: 1.2rem;
+}
+
+.relative {
+  position: relative;
+}
