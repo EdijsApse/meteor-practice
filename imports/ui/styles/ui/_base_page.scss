@@ -1,9 +1,13 @@
+// 74px - height of fixed header
+
 .base-page {
-    min-height: 100vh;
+    min-height: calc(100vh - 74px);
     background-color: $close-white;
+    margin-top: 74px;
     &.box-centered {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 0;
     }
 }

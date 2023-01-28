@@ -3,8 +3,10 @@ import VueMeteorTracker from "vue-meteor-tracker";
 import VueRouter from "vue-router";
 import BaseCard from "./components/UI/BaseCard.vue";
 import BasePage from "./components/UI/BasePage.vue";
+import BaseContainer from "./components/UI/BaseContainer.vue";
 import LoadingSpinner from "./components/UI/LoadingSpinner.vue";
 
+Vue.component("BaseContainer", BaseContainer);
 Vue.component("BaseCard", BaseCard);
 Vue.component("BasePage", BasePage);
 Vue.component("LoadingSpinner", LoadingSpinner);

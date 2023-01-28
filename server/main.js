@@ -1,3 +1,24 @@
-import '../imports/api/fixtures'
-import '../imports/api/methods'
-import '../imports/api/publications'
+import "../imports/api/methods";
+import "../imports/api/publications";
+import { EmergenciesCollection } from "../imports/api/collections/EmergenciesCollection";
+import { Meteor } from "meteor/meteor";
+
+const DEFAULT_COLLECTIONS = [
+  "Medical Emergency",
+  "Fire Alarm",
+  "Public Disturbance",
+  "Armed Assulat",
+  "Other",
+];
+
+const insertEmergencyType = (type) => {
+  EmergenciesCollection.insert({
+    type,
+  });
+};
+
+Meteor.startup(() => {
+  if (EmergenciesCollection.find().count() === 0) {
+    DEFAULT_COLLECTIONS.forEach(insertEmergencyType);
+  }
+});

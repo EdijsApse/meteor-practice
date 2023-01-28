@@ -1,26 +1,28 @@
 <template>
   <header class="header navbar-expand-lg">
-    <nav class="navbar">
-      <button class="navbar-toggler" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item" v-if="!user">
-            <router-link to="/">Home</router-link>
-          </li>
-          <li class="nav-item" v-if="user">
-            <router-link to="/emergencies">Emergencies</router-link>
-          </li>
-        </ul>
-        <div class="user-details relative" v-if="user">
-          <Transition name="fade">
-            <LoadingSpinner class="small-spinner" v-if="isLoggingOut" />
-          </Transition>
-          <button class="btn btn-secondary" @click="logout">Logout</button>
+    <BaseContainer>
+      <nav class="navbar">
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item" v-if="!user">
+              <router-link to="/">Home</router-link>
+            </li>
+            <li class="nav-item" v-if="user">
+              <router-link to="/emergencies">Emergencies</router-link>
+            </li>
+          </ul>
+          <div class="user-details relative" v-if="user">
+            <Transition name="fade">
+              <LoadingSpinner class="small-spinner" v-if="isLoggingOut" />
+            </Transition>
+            <button class="btn btn-secondary" @click="logout">Logout</button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </BaseContainer>
   </header>
 </template>
 

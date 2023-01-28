@@ -43,3 +43,16 @@ label {
 .relative {
   position: relative;
 }
+
+.page-title {
+  margin-bottom: $space-8;
+  &::after {
+    width: 5rem;
+    height: 4px;
+    border-radius: $border-radius-sm;
+    background-color: $deep-blue;
+    content: "";
+    display: block;
+    margin-top: $space-2;
+  }
+}

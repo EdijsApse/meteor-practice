@@ -3,7 +3,7 @@
     <Transition name="fade">
       <LoadingSpinner v-if="isLoggingIn" />
     </Transition>
-    <h1>Create Account</h1>
+    <h1 class="page-title">Create Account</h1>
     <form @submit.prevent="register">
       <div class="form-group">
         <label for="email">Email</label>
