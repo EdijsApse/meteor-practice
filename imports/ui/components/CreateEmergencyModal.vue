@@ -8,8 +8,13 @@
       <form @submit.prevent="createEmergency">
         <div class="form-group">
           <label for="description">Details about emergency</label>
-          <textarea id="description" v-model="description" class="form-control"></textarea>
+          <textarea
+            id="description"
+            v-model="description"
+            class="form-control"
+          ></textarea>
         </div>
+        <p class="error-message" v-if="errorMessage">{{ errorMessage }}</p>
         <button class="btn btn-primary">Save</button>
       </form>
     </div>
@@ -17,11 +22,14 @@
 </template>
 
 <script>
+import { Meteor } from "meteor/meteor";
+
 export default {
   props: ["emergency"],
   data() {
     return {
       description: "",
+      errorMessage: "",
     };
   },
   computed: {
@@ -30,7 +38,20 @@ export default {
     },
   },
   methods: {
-    createEmergency() {},
+    createEmergency() {
+      Meteor.call(
+        "createEmergency",
+        {
+          description: this.description,
+          emergency: this.emergency,
+        },
+        (err) => {
+          if (err && err.reason) {
+            this.errorMessage = err.reason;
+          }
+        }
+      );
+    },
   },
 };
 </script>

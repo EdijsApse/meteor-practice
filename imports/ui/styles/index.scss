@@ -7,6 +7,7 @@
 @import "./ui/index.scss";
 @import "./components/index.scss";
 
+th,
 h1,
 h2,
 h3,
@@ -22,16 +23,17 @@ p,
 span,
 input,
 button,
+td,
 label {
   @include font-regular();
   color: $dark;
 }
 
 .clickable {
-    cursor: pointer;
-    &:hover {
-        text-decoration: underline;
-    }
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .error-message {
@@ -55,4 +57,9 @@ label {
     display: block;
     margin-top: $space-2;
   }
+}
+
+.page {
+  padding-top: $space-8;
+  padding-bottom: $space-8;
 }

@@ -36,7 +36,7 @@ export default {
     },
     emergencies() {
       return EmergenciesCollection.find().fetch();
-    },
+    }
   },
   components: { EmergencyItem, CreateEmergencyModal, LoadingSpinner },
 };

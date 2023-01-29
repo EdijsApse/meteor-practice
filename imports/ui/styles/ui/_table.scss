@@ -1,0 +1,33 @@
+.table {
+  border: none;
+  thead {
+    border-bottom: 1px solid $bright-gray;
+    th {
+      font-size: 1.1rem;
+      padding: $space-2 0;
+    }
+  }
+  tbody {
+    border: none;
+    tr {
+      border: none;
+      td {
+        font-size: 0.9rem;
+        padding: $space-2 0;
+        border: none;
+        &.status {
+          font-weight: 600;
+        }
+        &.canceled {
+          color: $danger;
+        }
+        &.active {
+          color: $deep-blue;
+        }
+        &.completed {
+          color: $green;
+        }
+      }
+    }
+  }
+}

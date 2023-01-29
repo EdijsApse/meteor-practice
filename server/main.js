@@ -1,6 +1,7 @@
 import "../imports/api/methods";
 import "../imports/api/publications";
 import { EmergenciesCollection } from "../imports/api/collections/EmergenciesCollection";
+import { UserEmergenciesCollection } from "../imports/api/collections/UserEmergenciesCollection";
 import { Meteor } from "meteor/meteor";
 
 const DEFAULT_COLLECTIONS = [

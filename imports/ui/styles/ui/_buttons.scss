@@ -20,4 +20,15 @@
       background-color: $dark;
     }
   }
+  &.btn-danger {
+    background-color: $danger;
+    color: #FFF;
+    &:hover {
+      background-color: $danger-hover;
+      color: #fff;
+    }
+    &:active {
+      background-color: $danger;
+    }
+  }
 }
